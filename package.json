@@ -1,0 +1,12 @@
+{
+  "name": "quero-job-backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:Lorenalgm/quero-job-backend.git",
+  "author": "Lorena <lorena@proesc.com>",
+  "license": "MIT",
+  "dependencies": {
+    "knex": "^1.0.1",
+    "pg": "^8.7.1"
+  }
+}
