@@ -5,8 +5,21 @@
   "repository": "git@github.com:Lorenalgm/quero-job-backend.git",
   "author": "Lorena <lorena@proesc.com>",
   "license": "MIT",
+  "scripts": {
+    "start": "node src/server.js",
+    "migrate": "knex migrate:latest",
+    "seed": "knex seed:run",
+    "dev": "nodemon src/server.js",
+    "test": "jest"
+  },
   "dependencies": {
+    "dateformat": "^5.0.2",
+    "dotenv": "^14.3.2",
+    "express": "^4.17.2",
     "knex": "^1.0.1",
     "pg": "^8.7.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
   }
 }
