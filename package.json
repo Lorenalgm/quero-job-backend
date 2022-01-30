@@ -13,6 +13,7 @@
     "test": "jest"
   },
   "dependencies": {
+    "cors": "^2.8.5",
     "dateformat": "^5.0.2",
     "dotenv": "^14.3.2",
     "express": "^4.17.2",
