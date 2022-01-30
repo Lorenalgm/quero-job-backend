@@ -7,19 +7,20 @@ module.exports = {
         return response.json(trilhas_areas);
     },
     async store(request, response){
-        const { nome } = request.body;
+        const { trilha_id, area_id } = request.body;
 
         try {
-            let area = await knex('trilhas_areas').insert({
-                nome: nome
+            let trilha_area = await knex('trilhas_areas').insert({
+                trilha_id: trilha_id,
+                area_id: area_id
             }).returning('*');
 
-            area = area[0];
+            trilha_area = trilha_area[0];
 
-            return response.status(201).json(area);
+            return response.status(201).json(trilha_area);
         } catch (error) {
             console.log(error)
-            return response.status(400).send({ error: 'Não foi possível cadastrar a área'});
+            return response.status(400).send({ error: 'Não foi possível cadastrar a trilha área'});
         }
     },
     async delete(request, response){
